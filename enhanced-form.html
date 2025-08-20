@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Page with Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, nav, main, section, footer {
+            padding: 20px;
+            margin: auto;
+            max-width: 1000px;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #3498db;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML5 Content Showcase & Form Mastery</h1>
+    <p>Enhancing structure, media usage, and form handling</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#content">Content Features</a></li>
+        <li><a href="#media">Media Embeds</a></li>
+        <li><a href="#form">HTML5 Form</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <!-- Content Section -->
+    <section id="content">
+        <h2>Organized Content: Lists and Tables</h2>
+
+        <h3>Top 5 Web Development Skills</h3>
+        <ol>
+            <li>HTML5 & Semantic Markup</li>
+            <li>CSS3 and Responsive Design</li>
+            <li>JavaScript Fundamentals</li>
+            <li>Version Control (Git)</li>
+            <li>Basic DevOps Understanding</li>
+        </ol>
+
+        <h3>Comparison Table: Frontend Frameworks</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Framework</th>
+                    <th>Language</th>
+                    <th>Learning Curve</th>
+                    <th>Popularity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>React</td>
+                    <td>JavaScript</td>
+                    <td>Moderate</td>
+                    <td>High</td>
+                </tr>
+                <tr>
+                    <td>Vue</td>
+                    <td>JavaScript</td>
+                    <td>Low</td>
+                    <td>Moderate</td>
+                </tr>
+                <tr>
+                    <td>Angular</td>
+                    <td>TypeScript</td>
+                    <td>High</td>
+                    <td>Moderate</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media">
+        <h2>Embedded Media</h2>
+
+        <h3>Sample Image</h3>
+        <img src="https://via.placeholder.com/600x300" alt="Sample placeholder" width="100%">
+
+        <h3>Audio Clip</h3>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video Clip</h3>
+        <video width="100%" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Form Section -->
+    <section id="form">
+        <h2>User Information Form</h2>
+        <form action="#" method="post" novalidate>
+            <fieldset>
+                <legend>Personal Details</legend>
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3" autocomplete="name">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="readonly-id">Registration ID (readonly):</label>
+                <input type="text" id="readonly-id" value="REG2025-00321" readonly>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+
+                <label for="skills">Preferred Skills:</label>
+                <select id="skills" name="skills" required>
+                    <option value="">--Select one--</option>
+                    <option value="frontend">Frontend Development</option>
+                    <option value="backend">Backend Development</option>
+                    <option value="devops">DevOps</option>
+                    <option value="fullstack">Full Stack</option>
+                </select>
+
+                <label>Subscribe to newsletter?</label>
+                <label><input type="radio" name="newsletter" value="yes" required> Yes</label>
+                <label><input type="radio" name="newsletter" value="no"> No</label>
+
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" placeholder="Tell us about yourself..." rows="4" minlength="10"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Setup</legend>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required pattern="[a-zA-Z0-9_]{5,15}" placeholder="alphanumeric, 5-15 chars">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="6" placeholder="Min 6 characters">
+
+                <label for="confirm">Confirm Password:</label>
+                <input type="password" id="confirm" name="confirm" required placeholder="Re-type password">
+            </fieldset>
+
+            <button type="submit">Submit Form</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Enhanced HTML5 Assignment by Simret</p>
+</footer>
+
+</body>
+</html>
